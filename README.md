@@ -1,41 +1,30 @@
-<<<<<<< HEAD
-# JourneyPortfolio-
-Dynamic portfolio showcasing professional experiences, projects, and certifications, built with React, Framer Motion, and Tailwind CSS
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 JourneyPortfolio
 
-## Getting Started
+This portfolio is a personal project created to showcase my professional journey, projects, and achievements. It highlights my path, experiences, and skills in a visually appealing and interactive format, built using **React**, **Framer Motion**, and **Tailwind CSS**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🖼️ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Interactive Timeline**: Highlight your professional journey with animations and a clean design.
+- **Projects Showcase**: Display your projects with descriptions, technologies used, and visuals.
+- **Certifications Section**: Present your certifications with relevant technologies and images.
+- **Responsive Design**: Fully optimized for all screen sizes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Technologies Used
 
-## Learn More
+[![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white)](https://reactjs.org/) [![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)](https://www.framer.com/motion/) [![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## Visit the App:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [I will add later](http://localhost) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎨 Preview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Portfolio Screenshot](https://via.placeholder.com/800x400.png?text=Portfolio+Preview)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> f1a5806 (Initial commit from Create Next App)
+---
