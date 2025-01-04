@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {
-    // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth";
     return () => {
       document.documentElement.style.scrollBehavior = "auto";

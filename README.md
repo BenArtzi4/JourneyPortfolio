@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# JourneyPortfolio-
-
-Dynamic portfolio showcasing professional experiences, projects, and certifications, built with React, Framer Motion, and Tailwind CSS
-=======
 # 🌟 JourneyPortfolio
 
 This portfolio is a personal project created to showcase my professional journey, projects, and achievements. It highlights my path, experiences, and skills in a visually appealing and interactive format, built using **React**, **Framer Motion**, and **Tailwind CSS**.
@@ -33,4 +28,3 @@ Open [I will add later](http://localhost) in your browser.
 ![Portfolio Screenshot](https://via.placeholder.com/800x400.png?text=Portfolio+Preview)
 
 ---
->>>>>>> 9d6be1e525f8f78883010c61c52996462768cf9d

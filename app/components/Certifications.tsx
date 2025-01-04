@@ -20,28 +20,22 @@ const certifications = [
   },
 ];
 
-interface CertificationsProps {
-  scrollPosition: number;
-}
-
-export default function Certifications({
-  scrollPosition,
-}: CertificationsProps) {
+export default function Certifications() {
   const controls = useAnimation();
 
   useEffect(() => {
-    if (scrollPosition > 1500) {
-      controls.start((i) => ({
-        opacity: 1,
-        y: 0,
-        transition: { delay: i * 0.1 },
-      }));
-    }
-  }, [scrollPosition, controls]);
+    controls.start((i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1 },
+    }));
+  }, [controls]);
 
   return (
     <section className="my-16">
-      <h2 className="text-3xl font-bold mb-8 text-gray-800">Certifications</h2>
+      <h2 className="text-3xl md:text-2xl sm:text-xl font-bold mb-8 text-gray-800">
+        Certifications
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {certifications.map((cert, index) => (
           <motion.div
@@ -59,7 +53,7 @@ export default function Certifications({
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1 text-gray-800">
+              <h3 className="text-lg md:text-base sm:text-sm font-semibold mb-1 text-gray-800">
                 {cert.title}
               </h3>
               <p className="text-gray-600">{cert.issuer}</p>

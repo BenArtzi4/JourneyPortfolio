@@ -4,10 +4,10 @@ export default function Header() {
   return (
     <header className="bg-white py-8 shadow-md">
       <div className="container mx-auto px-4 text-left">
-        <h1 className="text-6xl font-extrabold text-gray-900 mb-2 tracking-tight">
+        <h1 className="text-6xl md:text-5xl sm:text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
           Gal Ben Artzi
         </h1>
-        <h2 className="text-2xl text-gray-600 mb-6">
+        <h2 className="text-2xl md:text-xl sm:text-lg text-gray-600 mb-6">
           Software Engineer | DevOps
         </h2>
         <div className="flex flex-wrap gap-4">

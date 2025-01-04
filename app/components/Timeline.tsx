@@ -49,7 +49,7 @@ const getTechnologyBadge = (tech: string): TechnologyBadge => {
       color: "06B6D4",
       logo: "/badges/Tailwind.svg",
     },
-    Node_js: { name: "Node.js", color: "339933", logo: "/badges/Node_js.svg" }, // Updated here
+    Node_js: { name: "Node.js", color: "339933", logo: "/badges/Node_js.svg" },
     Docker: { name: "Docker", color: "2496ED", logo: "/badges/Docker.svg" },
     MongoDB: { name: "MongoDB", color: "47A248", logo: "/badges/MongoDB.svg" },
     Redis: { name: "Redis", color: "DC382D", logo: "/badges/Redis.svg" },
@@ -227,29 +227,30 @@ const TimelineItem = ({
   index: number;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
-      className={`mb-8 flex ${
-        index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+      className={`mb-8 flex flex-col md:flex-row ${
+        index % 2 === 0 ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className={`w-1/2 ${index % 2 === 0 ? "pl-8" : "pr-8"}`}>
+      <div className="md:w-1/2">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           {item.year && (
             <span className="text-blue-500 font-semibold">{item.year}</span>
           )}
-          <h3 className="text-2xl font-semibold mb-2 text-gray-800">
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-800">
             {item.title}
           </h3>
           {item.subtitle && (
-            <h4 className="text-xl text-gray-600 mb-2">{item.subtitle}</h4>
+            <h4 className="text-lg md:text-xl text-gray-600 mb-2">
+              {item.subtitle}
+            </h4>
           )}
           {item.description && (
             <ul className="list-disc list-inside text-gray-700">
@@ -293,8 +294,8 @@ const FloatingCard = ({ children }: { children: React.ReactNode }) => {
 
 export default function Timeline() {
   return (
-    <div className="space-y-24">
-      <section className="my-16">
+    <div className="space-y-16">
+      <section>
         <TypewriterTitle text="Work History" />
         <div className="relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
