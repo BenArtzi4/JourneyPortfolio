@@ -235,11 +235,11 @@ const TimelineItem = ({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
-      className={`mb-8 flex flex-col md:flex-row ${
-        index % 2 === 0 ? "md:flex-row-reverse" : ""
+      className={`mb-8 flex flex-col sm:flex-row ${
+        index % 2 === 0 ? "sm:flex-row-reverse" : ""
       }`}
     >
-      <div className="md:w-1/2">
+      <div className="timeline-item sm:pl-8 sm:pr-8">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           {item.year && (
             <span className="text-blue-500 font-semibold">{item.year}</span>
@@ -298,7 +298,8 @@ export default function Timeline() {
       <section>
         <TypewriterTitle text="Work History" />
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+          {/* Blue line only visible on medium screens and larger */}
+          <div className="absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
           {workHistoryData.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
@@ -308,7 +309,8 @@ export default function Timeline() {
       <section className="my-16">
         <TypewriterTitle text="Education" />
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+          {/* Blue line only visible on medium screens and larger */}
+          <div className="absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
           {educationData.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
