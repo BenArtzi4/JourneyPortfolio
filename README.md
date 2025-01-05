@@ -1,4 +1,4 @@
-# 🌟 JourneyPortfolio
+# 🌟 My Portfolio
 
 This portfolio is a personal project created to showcase my professional journey, projects, and achievements. It highlights my path, experiences, and skills in a visually appealing and interactive format, built using **React**, **Framer Motion**, and **Tailwind CSS**.
 
@@ -19,12 +19,6 @@ This portfolio is a personal project created to showcase my professional journey
 
 ## Visit the App:
 
-Open [I will add later](http://localhost) in your browser.
-
----
-
-## 🎨 Preview
-
-![Portfolio Screenshot](https://via.placeholder.com/800x400.png?text=Portfolio+Preview)
+Open [my web](https://galbenartzi-portfolio.netlify.app/) in your browser.
 
 ---
