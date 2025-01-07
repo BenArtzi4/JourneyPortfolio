@@ -253,7 +253,7 @@ const TimelineItem = ({
             </h4>
           )}
           {item.description && (
-            <ul className="list-disc list-inside text-gray-700">
+            <ul className="list-disc list-inside text-gray-700 custom-list">
               {item.description.map((desc, i) => (
                 <li key={i}>{desc}</li>
               ))}

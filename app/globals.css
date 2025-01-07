@@ -39,3 +39,8 @@ body {
     width: 50%;
   }
 }
+
+.custom-list li {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
