@@ -74,7 +74,7 @@ const workHistoryData: TimelineItem[] = [
   {
     type: "experience",
     year: "2022 - Current",
-    title: "DevOps and Python Engineer",
+    title: "Python Developer and DevOps Engineer",
     subtitle: "Intel",
     description: [
       "Python Development: Enhances and extends Python software to optimize installations and streamline Linux-based environments",
