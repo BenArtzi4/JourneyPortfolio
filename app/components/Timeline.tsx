@@ -242,7 +242,7 @@ const TimelineItem = ({
       <div className="timeline-item sm:pl-8 sm:pr-8">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           {item.year && (
-            <span className="text-blue-500 font-semibold">{item.year}</span>
+            <span className="text-primary font-semibold">{item.year}</span>
           )}
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-800">
             {item.title}
@@ -299,7 +299,7 @@ export default function Timeline() {
         <TypewriterTitle text="Work History" />
         <div className="relative">
           {/* Blue line only visible on medium screens and larger */}
-          <div className="absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+          <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
           {workHistoryData.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
@@ -310,7 +310,7 @@ export default function Timeline() {
         <TypewriterTitle text="Education" />
         <div className="relative">
           {/* Blue line only visible on medium screens and larger */}
-          <div className="absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+          <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
           {educationData.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
