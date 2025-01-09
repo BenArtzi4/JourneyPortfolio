@@ -296,7 +296,10 @@ export default function Timeline() {
   return (
     <div className="space-y-16">
       <section>
-        <TypewriterTitle text="Work History" />
+        <TypewriterTitle
+          text="Work History"
+          className="typewriter-title text-white"
+        />
         <div className="relative">
           {/* Blue line only visible on medium screens and larger */}
           <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
@@ -307,7 +310,10 @@ export default function Timeline() {
       </section>
 
       <section className="my-16">
-        <TypewriterTitle text="Education" />
+        <TypewriterTitle
+          text="Education"
+          className="typewriter-title text-white"
+        />
         <div className="relative">
           {/* Blue line only visible on medium screens and larger */}
           <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
@@ -318,7 +324,10 @@ export default function Timeline() {
       </section>
 
       <section className="my-16">
-        <TypewriterTitle text="Volunteering" />
+        <TypewriterTitle
+          text="Volunteering"
+          className="typewriter-title text-white"
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {volunteeringData.map((item, index) => (
             <FloatingCard key={index}>
@@ -342,7 +351,10 @@ export default function Timeline() {
       </section>
 
       <section className="my-16">
-        <TypewriterTitle text="Projects" />
+        <TypewriterTitle
+          text="Projects"
+          className="typewriter-title text-white"
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((item, index) => (
             <FloatingCard key={index}>
@@ -391,7 +403,10 @@ export default function Timeline() {
       </section>
 
       <section className="my-16">
-        <TypewriterTitle text="Certifications" />
+        <TypewriterTitle
+          text="Certifications"
+          className="typewriter-title text-white"
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificationsData.map((item, index) => (
             <FloatingCard key={index}>

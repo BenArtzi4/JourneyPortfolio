@@ -3,7 +3,15 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function TypewriterTitle({ text }: { text: string }) {
+interface TypewriterTitleProps {
+  text: string;
+  className?: string;
+}
+
+export default function TypewriterTitle({
+  text,
+  className,
+}: TypewriterTitleProps) {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,7 +27,9 @@ export default function TypewriterTitle({ text }: { text: string }) {
 
   return (
     <motion.h2
-      className="text-4xl font-bold mb-12 text-center text-gray-800 font-serif"
+      className={`text-4xl font-bold mb-12 text-center font-serif ${
+        className || "text-gray-800"
+      }`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
