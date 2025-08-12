@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import TypewriterTitle from "./TypewriterTitle";
 
 import ExperienceCard from "./timeline/ExperienceCard";
-import EducationCard from "./timeline/EducationCard"; // 👈 new
+import EducationCard from "./timeline/EducationCard";
 import FloatingCard from "./timeline/FloatingCard";
 import { getTechnologyBadge } from "./timeline/getTechnologyBadge";
 
@@ -26,7 +26,7 @@ export default function Timeline() {
         <div className="relative">
           <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
           {workHistoryData.map((item, index) => (
-            <ExperienceCard key={index} item={item as any} index={index} />
+            <ExperienceCard key={index} item={item} index={index} />
           ))}
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function Timeline() {
         <div className="relative">
           <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
           {educationData.map((item, index) => (
-            <EducationCard key={index} item={item as any} index={index} />
+            <EducationCard key={index} item={item} index={index} />
           ))}
         </div>
       </section>
@@ -75,12 +75,28 @@ export default function Timeline() {
                   </h3>
                 </Link>
                 {item.technologies && (
-                  <motion.div className="flex flex-wrap gap-2" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+                  <motion.div
+                    className="flex flex-wrap gap-2"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
                     {item.technologies.map((tech, i) => {
                       const badge = getTechnologyBadge(tech);
                       return (
-                        <motion.div key={i} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.1 * i }}>
-                          <Image src={badge.logo} alt={tech} width={100} height={20} className="h-5 w-auto" />
+                        <motion.div
+                          key={i}
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.1 * i }}
+                        >
+                          <Image
+                            src={badge.logo}
+                            alt={tech}
+                            width={100}
+                            height={20}
+                            className="h-5 w-auto"
+                          />
                         </motion.div>
                       );
                     })}
@@ -99,8 +115,19 @@ export default function Timeline() {
             <FloatingCard key={index}>
               <div className="bg-white p-6 rounded-lg shadow-lg h-full">
                 {item.image && (
-                  <motion.div className="mb-4" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300, damping: 10 }}>
-                    <Image src={item.image} alt={item.title} width={200} height={150} unoptimized className="w-full h-auto object-cover rounded" />
+                  <motion.div
+                    className="mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={200}
+                      height={150}
+                      unoptimized
+                      className="w-full h-auto object-cover rounded"
+                    />
                   </motion.div>
                 )}
               </div>
