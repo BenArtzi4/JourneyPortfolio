@@ -1,18 +1,18 @@
 import type {
-  TimelineItem,
-  BasicTimelineItem,
+  CompanyExperienceItem,
   InstitutionEducationItem,
+  BasicTimelineItem,
 } from "./types";
 
-/* ---------------- Work History (unchanged structure) ---------------- */
+/* ---------------- Work History (grouped by company) ---------------- */
 
-export const workHistoryData: TimelineItem[] = [
+export const workHistoryData: CompanyExperienceItem[] = [
   {
     type: "experience",
     company: "Intel",
     roles: [
       {
-        year: "2025 – Present",
+        year: "2024 – Present",
         title: "Software Developer – SOC Builder Team",
         description: [
           "Python Software Engineering: Developed SOC Builder, a modular Python package with API integration to streamline backend workflows for complex design processes.",
@@ -20,7 +20,7 @@ export const workHistoryData: TimelineItem[] = [
         ],
       },
       {
-        year: "2022 – 2025",
+        year: "2022 – 2024",
         title: "DevOps & Python Developer – BITS Team",
         isStudent: true,
         description: [
@@ -35,7 +35,7 @@ export const workHistoryData: TimelineItem[] = [
     company: "The Ministry of Health of Israel",
     roles: [
       {
-        year: "2021 – 2022",
+        year: "2020 – 2021",
         title: "Research and Development Manager",
         description: [
           "Led a team of analysts and Python developers, processing and analyzing data to deliver actionable recommendations.",
@@ -102,7 +102,7 @@ export const educationData: InstitutionEducationItem[] = [
   },
 ];
 
-/* ---------------- Volunteering / Projects / Certs (unchanged) ---------------- */
+/* ---------------- Volunteering / Projects / Certifications ---------------- */
 
 export const volunteeringData: BasicTimelineItem[] = [
   {
@@ -120,12 +120,42 @@ export const volunteeringData: BasicTimelineItem[] = [
 ];
 
 export const projectsData: BasicTimelineItem[] = [
-  { type: "project", title: "ActiveFlow", technologies: ["React","TypeScript","Python","FastAPI","Vite","Firebase","Tailwind"], link: "https://github.com/BenArtzi4/ActiveFlow" },
-  { type: "project", title: "SongElite", technologies: ["Node_js","Docker","MongoDB","Redis"], link: "https://github.com/BenArtzi4/songElite" },
-  { type: "project", title: "PyQt Calculator with Tests", technologies: ["Python","QT"], link: "https://github.com/BenArtzi4/pyqt_calculator_with_tests" },
-  { type: "project", title: "Basketball Players Management", technologies: ["HTML","CSS","JavaScript"], link: "https://github.com/BenArtzi4/Basketball-players-management" },
-  { type: "project", title: "Docker Voting App", technologies: ["Node_js","Docker","MySQL","HTML","CSS"], link: "https://github.com/BenArtzi4/docker-voting-app" },
-  { type: "project", title: "World Capital Cities", technologies: ["Python","Pandas"], link: "https://github.com/BenArtzi4/Worlds-capital-cities" },
+  {
+    type: "project",
+    title: "ActiveFlow",
+    technologies: ["React", "TypeScript", "Python", "FastAPI", "Vite", "Firebase", "Tailwind"],
+    link: "https://github.com/BenArtzi4/ActiveFlow",
+  },
+  {
+    type: "project",
+    title: "SongElite",
+    technologies: ["Node_js", "Docker", "MongoDB", "Redis"],
+    link: "https://github.com/BenArtzi4/songElite",
+  },
+  {
+    type: "project",
+    title: "PyQt Calculator with Tests",
+    technologies: ["Python", "QT"],
+    link: "https://github.com/BenArtzi4/pyqt_calculator_with_tests",
+  },
+  {
+    type: "project",
+    title: "Basketball Players Management",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/BenArtzi4/Basketball-players-management",
+  },
+  {
+    type: "project",
+    title: "Docker Voting App",
+    technologies: ["Node_js", "Docker", "MySQL", "HTML", "CSS"],
+    link: "https://github.com/BenArtzi4/docker-voting-app",
+  },
+  {
+    type: "project",
+    title: "World Capital Cities",
+    technologies: ["Python", "Pandas"],
+    link: "https://github.com/BenArtzi4/Worlds-capital-cities",
+  },
 ];
 
 export const certificationsData: BasicTimelineItem[] = [

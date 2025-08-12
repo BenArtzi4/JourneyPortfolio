@@ -7,8 +7,8 @@ export type TimelineType =
 
 /* ---------- Work (grouped by company) ---------- */
 export interface ExperienceRole {
-  year: string;            // "2025 – Present"
-  title: string;           // "Software Developer – SOC Builder Team"
+  year: string; 
+  title: string;
   description?: string[];
   isStudent?: boolean;
 }
@@ -21,14 +21,14 @@ export interface CompanyExperienceItem {
 
 /* ---------- Education (grouped by institution) ---------- */
 export interface EducationProgram {
-  year: string;            // "2021 – 2025"
-  title: string;           // "Bachelor of Science: Computer Science"
+  year: string;
+  title: string;
   description?: string[];
 }
 
 export interface InstitutionEducationItem {
   type: "education";
-  school: string;          // "Open University"
+  school: string;
   programs: EducationProgram[];
 }
 
