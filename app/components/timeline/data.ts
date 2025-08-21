@@ -15,8 +15,8 @@ export const workHistoryData: CompanyExperienceItem[] = [
         year: "2024 – Present",
         title: "Software Developer – SOC Builder Team",
         description: [
-          "Python Software Engineering: Developed SOC Builder, a modular Python package with API integration to streamline backend workflows for complex design processes.",
-          "System Design: Built and maintained scalable data models and automation frameworks, reducing turnaround time (TAT) and improving workflow accuracy.",
+          "Python Software Engineering: Developing SOC Builder, a modular Python package with API integration to streamline backend workflows for complex design processes.",
+          "System Design: Designing and maintaining scalable data models and automation frameworks, reducing turnaround time (TAT) and improving workflow accuracy.",
         ],
       },
       {
@@ -24,8 +24,8 @@ export const workHistoryData: CompanyExperienceItem[] = [
         title: "DevOps & Python Developer – BITS Team",
         isStudent: true,
         description: [
-          "Python Development: Enhanced and extended Python software to optimize setups and streamline Linux-based environments.",
-          "CI/CD Processes: Designed and implemented CI/CD pipelines to improve development, deployment, and release workflows.",
+          "Python Development: Enhanced and extended Python software to optimize setup and streamline Linux-based environments.",
+          "CI/CD Processes: Designed and implemented CI/CD pipelines, improving development, deployment, and release workflows.",
         ],
       },
     ],
@@ -51,7 +51,7 @@ export const workHistoryData: CompanyExperienceItem[] = [
         year: "2016 – 2019",
         title: "Analyst and Project Manager",
         description: [
-          "Analyzed large-scale intelligence data using SQL and analytical tools to deliver strategic insights",
+          "Analyzed large-scale intelligence data using SQL and analytical tools, produced strategic insights enabling informed decisions.",
         ],
       },
     ],
