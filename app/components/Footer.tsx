@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-white py-6 mt-16 shadow-md">
-      <div className="container mx-auto px-4 text-center text-sm md:text-base text-gray-600">
-        <p>
-          &copy; {new Date().getFullYear()} Gal Ben Artzi. All rights reserved.
+    <footer className="border-t border-border-subtle bg-background/50 backdrop-blur-sm mt-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+        <p className="text-center text-sm text-foreground-subtle">
+          &copy; {new Date().getFullYear()} Gal Ben Artzi
         </p>
       </div>
     </footer>

@@ -20,115 +20,125 @@ import {
 
 export default function Timeline() {
   return (
-    <div className="space-y-16">
+    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 space-y-24 sm:space-y-32">
+      {/* Work History */}
       <section>
-        <TypewriterTitle text="Work History" className="typewriter-title text-white" />
+        <TypewriterTitle text="Work History" className="typewriter-title mb-12" />
         <div className="relative">
-          <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
+          <div className="timeline-line absolute hidden md:block left-1/2 transform -translate-x-1/2 h-full w-px"></div>
           {workHistoryData.map((item, index) => (
             <ExperienceCard key={index} item={item} index={index} />
           ))}
         </div>
       </section>
 
-      <section className="my-16">
-        <TypewriterTitle text="Education" className="typewriter-title text-white" />
+      {/* Education */}
+      <section>
+        <TypewriterTitle text="Education" className="typewriter-title mb-12" />
         <div className="relative">
-          <div className="timeline-line absolute hidden sm:block left-1/2 transform -translate-x-1/2 h-full w-1"></div>
+          <div className="timeline-line absolute hidden md:block left-1/2 transform -translate-x-1/2 h-full w-px"></div>
           {educationData.map((item, index) => (
             <EducationCard key={index} item={item} index={index} />
           ))}
         </div>
       </section>
 
-      <section className="my-16">
-        <TypewriterTitle text="Volunteering" className="typewriter-title text-white" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Volunteering */}
+      <section>
+        <TypewriterTitle text="Volunteering" className="typewriter-title mb-12" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {volunteeringData.map((item, index) => (
             <FloatingCard key={index}>
-              <div className="bg-white p-6 rounded-lg shadow-lg h-full">
-                <h3 className="text-2xl font-semibold mb-2 text-gray-800">{item.title}</h3>
-                {item.description && (
-                  <div className="text-gray-700">
-                    {item.description.map((desc, i) => (
-                      <p key={i} className="mb-1">
-                        {desc}
-                      </p>
-                    ))}
-                  </div>
-                )}
+              <div className="relative bg-background-elevated border border-border rounded-xl p-6 h-full hover:border-border-subtle transition-colors duration-300 overflow-hidden group">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-accent-glow via-transparent to-transparent pointer-events-none" />
+                <div className="relative">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{item.title}</h3>
+                  {item.description && (
+                    <div className="space-y-2">
+                      {item.description.map((desc, i) => (
+                        <p key={i} className="text-sm text-foreground-muted leading-relaxed">
+                          {desc}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </FloatingCard>
           ))}
         </div>
       </section>
 
-      <section className="my-16">
-        <TypewriterTitle text="Projects" className="typewriter-title text-white" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Projects */}
+      <section>
+        <TypewriterTitle text="Projects" className="typewriter-title mb-12" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((item, index) => (
             <FloatingCard key={index}>
-              <div className="bg-white p-6 rounded-lg shadow-lg h-full">
-                <Link href={item.link || "#"} target="_blank" rel="noopener noreferrer">
-                  <h3 className="text-2xl font-semibold mb-2 text-gray-600 hover:text-gray-800 hover:underline">
-                    {item.title}
-                  </h3>
-                </Link>
-                {item.technologies && (
-                  <motion.div
-                    className="flex flex-wrap gap-2"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    {item.technologies.map((tech, i) => {
-                      const badge = getTechnologyBadge(tech);
-                      return (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.1 * i }}
-                        >
-                          <Image
-                            src={badge.logo}
-                            alt={tech}
-                            width={100}
-                            height={20}
-                            className="h-5 w-auto"
-                          />
-                        </motion.div>
-                      );
-                    })}
-                  </motion.div>
-                )}
+              <div className="relative bg-background-elevated border border-border rounded-xl p-6 h-full hover:border-accent transition-all duration-300 overflow-hidden group">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-accent-glow via-transparent to-transparent pointer-events-none" />
+                <div className="relative flex flex-col h-full">
+                  <Link href={item.link || "#"} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-lg font-semibold mb-4 text-foreground group-hover:text-accent transition-colors">
+                      {item.title}
+                    </h3>
+                  </Link>
+                  {item.technologies && (
+                    <motion.div
+                      className="flex flex-wrap gap-2 mt-auto"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.15, duration: 0.4 }}
+                      viewport={{ once: true }}
+                    >
+                      {item.technologies.map((tech, i) => {
+                        const badge = getTechnologyBadge(tech);
+                        return (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.05 * i, duration: 0.3 }}
+                            viewport={{ once: true }}
+                          >
+                            <Image
+                              src={badge.logo}
+                              alt={tech}
+                              width={100}
+                              height={20}
+                              className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                            />
+                          </motion.div>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </div>
               </div>
             </FloatingCard>
           ))}
         </div>
       </section>
 
-      <section className="my-16">
-        <TypewriterTitle text="Certifications" className="typewriter-title text-white" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Certifications */}
+      <section>
+        <TypewriterTitle text="Certifications" className="typewriter-title mb-12" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificationsData.map((item, index) => (
             <FloatingCard key={index}>
-              <div className="bg-white p-6 rounded-lg shadow-lg h-full">
+              <div className="relative bg-background-elevated border border-border rounded-xl p-4 h-full hover:border-border-subtle transition-colors duration-300 overflow-hidden group">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-accent-glow via-transparent to-transparent pointer-events-none" />
                 {item.image && (
-                  <motion.div
-                    className="mb-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                  >
+                  <div className="relative">
                     <Image
                       src={item.image}
                       alt={item.title}
-                      width={200}
-                      height={150}
+                      width={400}
+                      height={300}
                       unoptimized
-                      className="w-full h-auto object-cover rounded"
+                      className="w-full h-auto object-cover rounded-lg"
                     />
-                  </motion.div>
+                  </div>
                 )}
               </div>
             </FloatingCard>
